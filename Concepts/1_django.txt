@@ -17,6 +17,38 @@ Why do we need a virtual environtment?
     A virtual environtment allows you to have a virtual installation of Python and packages on your computer. Packages change and get updated often and there may be compatibility issues. Anything installed with pipenv or conda when the environment is activated, will only be installed for this environment. Therefore, a virtual environment helps you to specify and avoid confusion of versions of the packages that you use. If you update your packages on the local machine, you won't have to worry that the web app built in the virtual environemtn will be broken because of compatibility issues.
 
 
+__init__.py:
+    This file allows Django to know that the directory can be treated as a package.
+
+settings.py:
+    This is where you save all your project settings.
+
+urls.py:
+    This will save all the url patterns for your project.
+
+wsgi.py:
+    It is the "web server gateway interface". It will later help to deploy the app to production.
+
+manage.py:
+    This is associated with many command lines that we will use on the web app.
+    <python manage.py runserver>
+    <python manage.py migrate>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
