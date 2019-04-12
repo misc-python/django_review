@@ -21,7 +21,7 @@ __init__.py:
     This file allows Django to know that the directory can be treated as a package.
 
 settings.py:
-    This is where you save all your project settings.
+    This is where you save all your project settings, including all the installed apps.
 
 urls.py:
     This will save all the url patterns for your project.
@@ -33,16 +33,24 @@ manage.py:
     This is associated with many command lines that we will use on the web app.
     <python manage.py runserver>
     <python manage.py migrate>
+    <python manage.py startproject first_project>
+    <python manage.py startapp first_app>
 
 
+Migration:
+    A migration allows you to move databases from one design to antoher. 
 
 
+A Django Application:
+    A Django application is created for a specific functionality of your web app, for example, a registration app, a polling app, a comments app, etc. These Django apps can then be plugged into other Django projects.
 
+    With this structure, you can reuse your Django app among various Django projects, or you can use other poeple's Django apps in your Django projects.
 
+admin.py:
+    You can register your models here.
 
-
-
-
+views.py:
+    This is where you have functions that handle requests and return responses.
 
 
 
