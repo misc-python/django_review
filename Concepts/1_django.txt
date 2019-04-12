@@ -1,0 +1,28 @@
+What are the strengths and weaknesses of Python?
+    - High-level, interprested
+    - Readability
+    - Large standard library/open-source community
+    - Versatile features and fewer programming codes
+    - Integration feature: with Java, C++
+
+    - Weak in mobile computing
+    - Low speed: Python executes with the help of an interpreter instead of the compiler, which causes it to slow down
+
+
+Who is using Django?
+    Pinterest, PBS, Instagram, Washington Times, Mozilla, etc.
+
+
+Why do we need a virtual environtment?
+    A virtual environtment allows you to have a virtual installation of Python and packages on your computer. Packages change and get updated often and there may be compatibility issues. Anything installed with pipenv or conda when the environment is activated, will only be installed for this environment. Therefore, a virtual environment helps you to specify and avoid confusion of versions of the packages that you use. If you update your packages on the local machine, you won't have to worry that the web app built in the virtual environemtn will be broken because of compatibility issues.
+
+
+
+
+
+
+
+
+
+Source: https://medium.com/@mindfiresolutions.usa/advantages-and-disadvantages-of-python-programming-language-fd0b394f2121 
+
