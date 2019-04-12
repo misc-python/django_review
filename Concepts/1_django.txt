@@ -1,0 +1,68 @@
+What are the strengths and weaknesses of Python?
+    - High-level, interprested
+    - Readability
+    - Large standard library/open-source community
+    - Versatile features and fewer programming codes
+    - Integration feature: with Java, C++
+
+    - Weak in mobile computing
+    - Low speed: Python executes with the help of an interpreter instead of the compiler, which causes it to slow down
+
+
+Who is using Django?
+    Pinterest, PBS, Instagram, Washington Times, Mozilla, etc.
+
+
+Why do we need a virtual environtment?
+    A virtual environtment allows you to have a virtual installation of Python and packages on your computer. Packages change and get updated often and there may be compatibility issues. Anything installed with pipenv or conda when the environment is activated, will only be installed for this environment. Therefore, a virtual environment helps you to specify and avoid confusion of versions of the packages that you use. If you update your packages on the local machine, you won't have to worry that the web app built in the virtual environemtn will be broken because of compatibility issues.
+
+
+__init__.py:
+    This file allows Django to know that the directory can be treated as a package.
+
+settings.py:
+    This is where you save all your project settings, including all the installed apps.
+
+urls.py:
+    This will save all the url patterns for your project.
+
+wsgi.py:
+    It is the "web server gateway interface". It will later help to deploy the app to production.
+
+manage.py:
+    This is associated with many command lines that we will use on the web app.
+    <python manage.py runserver>
+    <python manage.py migrate>
+    <python manage.py startproject first_project>
+    <python manage.py startapp first_app>
+
+
+Migration:
+    A migration allows you to move databases from one design to antoher. 
+
+
+A Django Application:
+    A Django application is created for a specific functionality of your web app, for example, a registration app, a polling app, a comments app, etc. These Django apps can then be plugged into other Django projects.
+
+    With this structure, you can reuse your Django app among various Django projects, or you can use other poeple's Django apps in your Django projects.
+
+admin.py:
+    You can register your models here.
+
+views.py:
+    This is where you have functions that handle requests and return responses.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https://medium.com/@mindfiresolutions.usa/advantages-and-disadvantages-of-python-programming-language-fd0b394f2121 
+
