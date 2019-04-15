@@ -100,7 +100,8 @@ To Create Superuser:
     <python manage.py createsuperuser>
 
 
-
+Population Scripts:
+    <pipenv install Faker>
 
 
 
