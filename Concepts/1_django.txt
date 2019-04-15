@@ -61,6 +61,16 @@ Templates:
         TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 
+Static Files:
+    - Inside the root folder, create folder static/images
+    - In settings.py, add <STATIC_DIR = os.path.join(BASE_DIR, "static")>
+    - In the html page, add 
+        {% load staticfiles %}
+        <img src="{% static "images/django.jpg" %}" alt="django picture">
+    - To link to a css file in html, add:
+        <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+
+
 
 
 
