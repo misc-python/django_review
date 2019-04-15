@@ -71,6 +71,46 @@ Static Files:
         <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
 
 
+Models:
+    - Often models will reference each other. For this purpose, we use the concepts of Foreign Keys and Primary Keys. A primary key is a unique ID for each row in a table. A foreign key denotes that the the column coincides with a primary of another table.
+    - Run the django command:
+        <python manage.py migrate>
+        <python manage.py makemigrations app_1>
+        <python manage.py migrate>
+
+
+Add To Model With Shell Commands:
+    - <python manage.py shell>
+    - from first_app.models import Topic
+    - t = Topic(top_name="Social Network")
+    - t.save()
+    - print(Topic.object.all())
+
+
+In admin.py:
+    from django.contrib import admin
+    from first_app.models import Topic, WebPage, AccessRecord
+
+    admin.site.register(Topic)
+    admin.site.register(WebPage)
+    admin.site.register(AccessRecord)
+
+
+To Create Superuser:
+    <python manage.py createsuperuser>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
