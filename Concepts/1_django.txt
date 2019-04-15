@@ -104,8 +104,38 @@ Population Scripts:
     <pipenv install Faker>
 
 
+To Query Models from view.py:
+    from first_app.models import AccessRecord, Topic, WebPage
 
+    def index(request):
+        webpage_list = AccessRecord.objects.order_by('date')
+        date_dict = {'access_records':webpage_list }
+        
+        return render(request, 'first_app/index.html', context='date_dict')
 
+To render the context in index.html:
+    {% load staticfiles}
+
+    {% if access_records%}
+    <table>
+    <thead>
+      <th>Site Name</th>
+      <th>Date Accessed</th>
+    </thead>
+
+    {% for acc in access_records%}
+    <tr>
+      <td> {{acc.name}} </td>
+      <td> {{acc.date}} </td>
+    </tr>
+    {% endfor %}
+
+    </table>
+
+    {% else %}
+    <p>No Access Record Found.</p>
+
+    {% endif %}
 
 
 

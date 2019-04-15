@@ -24,12 +24,9 @@ def populate(N=5):
         fake_name = fakegen.company()
 
         webpage = WebPage.objects.get_or_create(topic=top, url=fake_url, name=fake_name)[0]
-    
         access = AccessRecord.objects.get_or_create(name=webpage, date=fake_date)[0]
-
 
 if __name__ == '__main__':
     print('Populating script...')
     populate(20)
     print('Populating complete!')
-
