@@ -34,6 +34,7 @@ manage.py:
     <python manage.py runserver>
     <python manage.py migrate>
     <python manage.py startproject first_project>
+    Go into the folder of first_project, and then run:
     <python manage.py startapp first_app>
 
 
