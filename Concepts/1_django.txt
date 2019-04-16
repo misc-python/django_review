@@ -105,6 +105,26 @@ Population Scripts:
     <pipenv install Faker>
 
 
+Relative URL's:
+
+    <a href="{% url 'index' %}"> Home Page </a>
+
+    <a href="{% url 'basic_app: other_page' %}"> The Other Page </a>
+
+    "basic_app" is the app_name in urls.py, and "other_page" is the name of the url pattern.
+
+    <a href="{% url 'admin:index' %}"> Link To Admin </a>
+    Before you can have this relative url work, you may need to run <python manage.py migrate>.
+
+
+
+
+
+
+
+
+
+
 
 
 
