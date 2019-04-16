@@ -6,15 +6,12 @@
 
   </head>
   <body>
-    <h1>Forms show here</h1>
-    {% if topic%}
-    {% for what in topic %}
-      <p>{{what.top_name}}</p>
-    
+    <h1>Input Forms here</h1>
+    <form method="POST">
+      {{ form.as_p }}
 
-
-
-    {% endfor %}
-    {% endif %}
+      {% csrf_token %}
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
