@@ -7,11 +7,14 @@
   </head>
   <body>
     <h1>Forms show here</h1>
+    {% if topic%}
+    {% for what in topic %}
+      <p>{{what.top_name}}</p>
+    
 
 
 
-
-
-
+    {% endfor %}
+    {% endif %}
   </body>
 </html>

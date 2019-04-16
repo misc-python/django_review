@@ -118,8 +118,8 @@ Population Scripts:
 
 
 
-
-
+joyceliao
+djangoreview
 
 Source: https://medium.com/@mindfiresolutions.usa/advantages-and-disadvantages-of-python-programming-language-fd0b394f2121 
 
