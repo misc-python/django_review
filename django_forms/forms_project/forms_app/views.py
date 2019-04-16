@@ -6,7 +6,11 @@ from . import forms
 
 
 def home_view(request):
-    return render(request, 'forms_app/index.html', {'message': 'hello~'})
+    context = {
+        "text": "this is for django filter",
+        "number": 150,
+    }
+    return render(request, 'forms_app/index.html', context=context)
 
 
 def user_view(request):
