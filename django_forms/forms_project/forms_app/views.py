@@ -1,12 +1,26 @@
 from django.shortcuts import render
 from forms_app.models import Topic, Webpage, AccessRecord
-from forms_app.forms import FormName
+from forms_app.forms import FormName, FormUser
 from . import forms
 # Create your views here.
 
 
 def home_view(request):
     return render(request, 'forms_app/index.html', {'message': 'hello~'})
+
+
+def user_view(request):
+    form = forms.FormUser()
+    if request.method == "POST":
+        form = forms.FormUser(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return home_view(request)
+        else:
+            print('Error from invalid user form.')
+
+    return render(request, 'forms_app/user.html', {'form': form})
 
 
 def show_form_view(request):
