@@ -133,13 +133,15 @@ Base & Extended .html:
         {% endblock %}
 
 
+Template Filter:
 
+    {{ value | filter:"parameter" }}
 
+    {{ value | title }}
+    This will capitalize the first letter of every word in a string.
 
-
-
-
-
+    {{ my_date | date:"Y-m-d" }}
+    This will specify the format of the dates.
 
 
 
