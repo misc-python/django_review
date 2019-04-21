@@ -8,7 +8,7 @@
   <body>
     <h1>Forms App Home Page</h1>
 
-    <p> Text: {{ text | title }} </p>
+    <p> Text: {{ text | cut:'django' }} </p>
     <p> Number: {{ number | add:100 }} </p>
 
 
