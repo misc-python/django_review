@@ -144,6 +144,14 @@ Template Filter:
     This will specify the format of the dates.
 
 
+How <django.contrib.auth> Stores Password:
+    - It uses the default PBKDF2 algorithm with an SHA256 (Secure Hash Algorithm) hash that is built in in Django
+    - You have the option to upgrade to an even more secure hash algorithm
+
+
+
+
+
 
 
 
