@@ -147,6 +147,8 @@ Template Filter:
 How <django.contrib.auth> Stores Password:
     - It uses the default PBKDF2 algorithm with an SHA256 (Secure Hash Algorithm) hash that is built in in Django
     - You have the option to upgrade to an even more secure hash algorithm
+      <pipenv install bcrypt>
+      <pipenv install argon2-cffi>
 
 
 

@@ -9,6 +9,7 @@ verify_ssl = true
 django = "*"
 faker = "*"
 bcrypt = "*"
+argon2-cffi = "*"
 
 [requires]
 python_version = "3.6"
