@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 faker = "*"
+bcrypt = "*"
+argon2-cffi = "*"
 
 [requires]
 python_version = "3.6"
