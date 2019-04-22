@@ -1,5 +1,5 @@
 from django import forms
-from forms_app.models import User
+from forms_app.models import NewPerson
 from django.core import validators
 
 
@@ -24,8 +24,8 @@ class FormName(forms.Form):
             raise forms.ValidationError('Make sure emails match.')
 
 
-class FormUser(forms.ModelForm):
+class FormNewPerson(forms.ModelForm):
 
     class Meta():
-        model = User
+        model = NewPerson
         fields = '__all__'
