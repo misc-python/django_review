@@ -151,6 +151,26 @@ How <django.contrib.auth> Stores Password:
       <pipenv install argon2-cffi>
 
 
+Django User Model:
+    The Django User model has fields such as:
+        - Username
+        - Email
+        - Password
+        - First name
+        - Last name
+
+    It has attributes such as:
+        - is_active
+        - is_staff
+        - is_superuser
+
+    You can add in more attributes to the User, such as website links or profile image.
+    To do this, you need to add in a new model in your application that has a relationship to Django's original User class.
+
+
+
+
+
 
 
 
