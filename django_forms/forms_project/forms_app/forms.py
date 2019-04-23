@@ -33,10 +33,11 @@ class FormNewPerson(forms.ModelForm):
         fields = '__all__'
 
 
+class FormUserProfileInfo(forms.ModelForm):
+    """Extension of django's User model."""
+    portfolio = forms.URLField(required=False)
+    picture = forms.ImageField(required=False)
 
-
-
-
-
-
-
+    class Meta:
+        model = UserProfileInfo
+        exclude = ('user',)
