@@ -1,6 +1,7 @@
 from django import forms
-from forms_app.models import NewPerson, UserProfileInfo
 from django.core import validators
+from django.contrib.auth.models import User
+from forms_app.models import NewPerson, UserProfileInfo
 
 
 def check_for_j(value):
@@ -33,11 +34,19 @@ class FormNewPerson(forms.ModelForm):
         fields = '__all__'
 
 
+class FormUser(forms.ModelForm):
+    """Linked to django User."""
+
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
+
+
 class FormUserProfileInfo(forms.ModelForm):
     """Extension of django's User model."""
-    portfolio = forms.URLField(required=False)
-    picture = forms.ImageField(required=False)
 
     class Meta:
         model = UserProfileInfo
-        exclude = ('user',)
+        fields = ('portfolio', 'picture')
