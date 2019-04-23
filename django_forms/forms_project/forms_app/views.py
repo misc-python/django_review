@@ -14,6 +14,7 @@ def home_view(request):
 
 
 def newPerson_view(request):
+    # To access the newPerson form.
     form = forms.FormNewPerson()
     if request.method == "POST":
         form = forms.FormNewPerson(request.POST)
@@ -28,6 +29,7 @@ def newPerson_view(request):
 
 
 def show_form_view(request):
+    # To show all data in Topic model.
     topic = Topic.objects.all()
     topic_dict = {'topic': topic}
 

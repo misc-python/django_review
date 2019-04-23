@@ -27,6 +27,8 @@ class AccessRecord(models.Model):
 
 
 class NewPerson(models.Model):
+    """A model unrelated to django's User model."""
+
     first_name = models.CharField(max_length=264, unique=True)
     last_name = models.CharField(max_length=264, unique=True)
     email = models.EmailField()
@@ -36,8 +38,8 @@ class NewPerson(models.Model):
 
 
 class UserProfileInfo(models.Model):
+    """Create a one-to-one model relationship to User."""
 
-    # Create a one-to-one model relationship to User
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     portfolio = models.URLField(blank=True)

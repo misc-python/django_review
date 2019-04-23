@@ -20,8 +20,10 @@ from forms_app.views import home_view, show_form_view, form_view, newPerson_view
 
 urlpatterns = [
     path('', home_view, name="home"),
-    path('newperson', newPerson_view, name="newPerson"),
-    path('showforms', show_form_view, name="show_forms"),
-    path('forms', form_view, name="forms"),
+    # Update NewPerson model:
+    # path('newperson', newPerson_view, name="newPerson"),
+    path('showtopic', show_form_view, name="show topic"),
+    # Test form not linked to the model:
+    # path('forms', form_view, name="forms"),
     path('admin/', admin.site.urls),
 ]
