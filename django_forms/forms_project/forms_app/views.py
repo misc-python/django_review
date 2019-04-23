@@ -6,6 +6,7 @@ from . import forms
 
 
 def home_view(request):
+    """Home page."""
     context = {
         "text": "this is for django filter",
         "number": 150,
@@ -14,6 +15,7 @@ def home_view(request):
 
 
 def newPerson_view(request):
+    """To access the newPerson form (unrealted to django's User model)."""
     form = forms.FormNewPerson()
     if request.method == "POST":
         form = forms.FormNewPerson(request.POST)
@@ -28,15 +30,17 @@ def newPerson_view(request):
 
 
 def show_form_view(request):
+    """To show all data in Topic model."""
     topic = Topic.objects.all()
     topic_dict = {'topic': topic}
 
     return render(request, 'forms_app/show_forms.html', context=topic_dict)
 
 
-def form_view(request):
+def testform_view(request):
+    """Test form not linked to a model."""
     form = forms.FormName()
-    
+
     if request.method == "POST":
         form = forms.FormName(request.POST)
 
@@ -46,6 +50,16 @@ def form_view(request):
             print("Email: ", form.cleaned_data['email'])
             print("Message: ", form.cleaned_data['text'])
 
-    return render(request, 'forms_app/forms.html', {'form': form})
+    return render(request, 'forms_app/testforms.html', {'form': form})
+
+
+def userprofile_view(request):
+    """Extension of django's User model."""
+    form = forms.FormUserProfileInfo()
+
+    return render(request, 'forms_app/userform.html', {'form': form})
+
+
+
 
 
