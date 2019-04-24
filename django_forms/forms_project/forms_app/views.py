@@ -24,7 +24,7 @@ def newPerson_view(request):
             form.save(commit=True)
             return home_view(request)
         else:
-            print('Error from invalid newPerson form.')
+            print('Error updating NewPerson Form.')
 
     return render(request, 'forms_app/newPerson.html', {'form': form})
 
@@ -56,6 +56,15 @@ def testform_view(request):
 def userprofile_view(request):
     """Extension of django's User model."""
     form = forms.FormUserProfileInfo()
+
+    if request.method == "POST":
+        form = forms.FormUserProfileInfo(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return home_view(request)
+        else:
+            print('Error updating UserProfile Form.')
 
     return render(request, 'forms_app/userform.html', {'form': form})
 
