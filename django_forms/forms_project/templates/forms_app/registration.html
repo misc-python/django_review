@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Registration</title>
+{% extends 'form_app/base.html' %}
+{% load staticfiles %}
 
 
-  </head>
-  <body>
-    <h1>Registration Form</h1>
-    <form method="POST">
-      {{ form.as_p }}
+{% block body_block%}
 
-      {% csrf_token %}
-      <input type="submit" value="Submit">
-    </form>
+  <div class="jumbotron">
+    {% if registered %}
+      <h1>You have been registered.</h1>
 
+    {% else %}
+      <h1>Register here:</h1>
 
-  </body>
-</html>
+      <form method="POST" ectype="multipart/form-data">
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+
+        {% csrf_token %}
+        <input type="submit" name="" value="Register">
+      </form>
+    {% endif %}
+
+  </div>
+
+{% endblock%}
