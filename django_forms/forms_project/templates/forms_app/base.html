@@ -11,12 +11,20 @@
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <ul class="nav navbar-nav">
-          <li><a class="navbar-brand" href="{% url 'index' %}">Home</a></li>
-          <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
-          <li><a class="navbar-link" href="{% url 'forms_app:register' %}">Register</a></li>
-
+          <li><a class="navbar-brand" href="{% url 'home' %}">Home</a></li>
+          <li><a class="navbar-link" href="{% url 'admin:index' %}">Django Admin</a></li>
+          <li><a class="navbar-link" href="{% url 'show topic' %}">Show "Topic"</a></li>
+          <li><a class="navbar-link" href="{% url 'test forms' %}">Test Form (No Database)</a></li>
+          <li><a class="navbar-link" href="{% url 'user profile' %}">User Profile</a></li>
+          <li>Register</li>
         </ul>
       </div>
     </nav>
+
+    <div class="container">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
   </body>
 </html>

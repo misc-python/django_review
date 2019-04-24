@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
+{% extends "forms_app/base.html" %}
 
 
-  </head>
-  <body>
+{% block body_block %}
     <h1>Forms App Home Page</h1>
 
     <p> Text: {{ text | cut:'django' }} </p>
     <p> Number: {{ number | add:100 }} </p>
 
-
-
-
-  </body>
-</html>
+{% endblock %}

@@ -23,7 +23,7 @@ urlpatterns = [
     # Update NewPerson model:
     # path('newperson', newPerson_view, name="newPerson"),
     path('showtopic', show_form_view, name="show topic"),
-    path('testforms', testform_view, name="forms"),
+    path('testforms', testform_view, name="test forms"),
     path('userprofile', userprofile_view, name="user profile"),
     path('admin/', admin.site.urls),
 ]
