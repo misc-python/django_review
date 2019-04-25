@@ -2,7 +2,6 @@ from django.shortcuts import render
 from forms_app.models import Topic, Webpage, AccessRecord
 from forms_app.forms import FormName
 from . import forms
-# Create your views here.
 
 
 def home_view(request):
@@ -14,7 +13,7 @@ def home_view(request):
     return render(request, 'forms_app/index.html', context=context)
 
 
-def show_form_view(request):
+def show_topic(request):
     """To show all data in Topic model."""
     topic = Topic.objects.all()
     topic_dict = {'topic': topic}
