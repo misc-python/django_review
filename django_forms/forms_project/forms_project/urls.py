@@ -25,5 +25,6 @@ urlpatterns = [
     path('showtopic', views.show_form_view, name="show topic"),
     path('testforms', views.testform_view, name="test forms"),
     path('userprofile', views.userprofile_view, name="user profile"),
+    path('register', views.register, name="register"),
     path('admin/', admin.site.urls),
 ]

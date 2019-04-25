@@ -69,6 +69,46 @@ def userprofile_view(request):
     return render(request, 'forms_app/userform.html', {'form': form})
 
 
+def register(request):
+    """To process registration page."""
+    registered = False
+
+    if request.method == "POST":
+        user_form = forms.FormUser(data=request.POST)
+        profile_form = forms.FormUserProfileInfo(data=request.POST)
+
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+
+            # To hash the password:
+            user.set_password(user.password)
+
+            user.save()
+
+            profile = profile_form.save(commit=False)
+
+            # To set up one-to-one relationship:
+            profile.user = user
+
+            if 'picture' in request.FILES:
+                profile.picture = request.FILES['picture']
+
+            profile.save()
+
+            registered = True
+
+        else:
+            print(user_form.errors, profile_form.errors)
+
+    else:
+        user_form = forms.FormUser
+        profile_form = forms.FormUserProfileInfo
+
+    return render(request, 'forms_app/registration.html', 
+        {'user_form': user_form,
+         'profile_form': profile_form,
+         'registered': registered,
+        })
 
 
 
