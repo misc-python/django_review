@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Forms</title>
+{% extends "forms_app/base.html" %}
+{% load staticfiles %}
 
-
-  </head>
-  <body>
+{% block body_block %}
     <h1>Input Test Forms Here (Not Linked To Database)</h1>
     <form method="POST">
       {{ form.as_p }}
@@ -13,5 +9,5 @@
       {% csrf_token %}
       <input type="submit" value="Submit">
     </form>
-  </body>
-</html>
+
+{% endblock %}
