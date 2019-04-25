@@ -1,7 +1,7 @@
 from django import forms
 from django.core import validators
 from django.contrib.auth.models import User
-from forms_app.models import NewPerson, UserProfileInfo
+from forms_app.models import UserProfileInfo
 
 
 def check_for_j(value):
@@ -24,14 +24,6 @@ class FormName(forms.Form):
         v_email = all_clean_data['verify_email']
         if email != v_email:
             raise forms.ValidationError('Make sure emails match.')
-
-
-class FormNewPerson(forms.ModelForm):
-    """Linked to NewPerson model."""
-
-    class Meta:
-        model = NewPerson
-        fields = '__all__'
 
 
 class FormUser(forms.ModelForm):

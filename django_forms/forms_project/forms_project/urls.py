@@ -20,8 +20,6 @@ from forms_app import views
 
 urlpatterns = [
     path('', views.home_view, name="home"),
-    # Update NewPerson model:
-    # path('newperson', views.newPerson_view, name="newPerson"),
     path('showtopic', views.show_form_view, name="show topic"),
     path('testforms', views.testform_view, name="test forms"),
     path('userprofile', views.userprofile_view, name="user profile"),

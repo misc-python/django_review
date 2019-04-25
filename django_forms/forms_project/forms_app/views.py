@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from forms_app.models import Topic, Webpage, AccessRecord
-from forms_app.forms import FormName, FormNewPerson
+from forms_app.forms import FormName
 from . import forms
 # Create your views here.
 
@@ -12,21 +12,6 @@ def home_view(request):
         "number": 150,
     }
     return render(request, 'forms_app/index.html', context=context)
-
-
-def newPerson_view(request):
-    """To access the newPerson form (unrealted to django's User model)."""
-    form = forms.FormNewPerson()
-    if request.method == "POST":
-        form = forms.FormNewPerson(request.POST)
-
-        if form.is_valid():
-            form.save(commit=True)
-            return home_view(request)
-        else:
-            print('Error updating NewPerson Form.')
-
-    return render(request, 'forms_app/newPerson.html', {'form': form})
 
 
 def show_form_view(request):
