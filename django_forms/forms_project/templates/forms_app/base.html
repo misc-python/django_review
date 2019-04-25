@@ -2,10 +2,12 @@
 <html>
   <head>
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
 
   </head>
-
 
   <body>
     <nav class="navbar navbar-default navbar-static-top">
@@ -16,7 +18,7 @@
           <li><a class="navbar-link" href="{% url 'show topic' %}">Show "Topic"</a></li>
           <li><a class="navbar-link" href="{% url 'test forms' %}">Test Form (No Database)</a></li>
           <li><a class="navbar-link" href="{% url 'user profile' %}">User Profile</a></li>
-          <li>Register</li>
+          <li><a class="navbar-link" href="{% url 'register' %}">Registration</a></li>
         </ul>
       </div>
     </nav>

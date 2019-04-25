@@ -26,17 +26,6 @@ class AccessRecord(models.Model):
         return str(self.date)
 
 
-class NewPerson(models.Model):
-    """A model unrelated to django's User model."""
-
-    first_name = models.CharField(max_length=264, unique=True)
-    last_name = models.CharField(max_length=264, unique=True)
-    email = models.EmailField()
-
-    def __str__(self):
-        return self.email
-
-
 class UserProfileInfo(models.Model):
     """Create a one-to-one model relationship to User."""
 
