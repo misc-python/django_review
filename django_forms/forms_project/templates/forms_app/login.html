@@ -1,15 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>LogIn</title>
+{% extends "forms_app/base.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>Please login</h1>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="Enter username">
+
+        <label for="password">Password: </label>
+        <input type="password" name="password">
+
+        <input type="submit" name="" value="login">
 
 
-  </head>
-  <body>
-    <h1>Login Page</h1>
+      </form>
+  </div>
 
 
-
-
-  </body>
-</html>
+{% endblock %}

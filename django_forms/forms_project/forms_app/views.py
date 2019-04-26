@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from forms_app.models import Topic, Webpage, AccessRecord
-from forms_app.forms import FormName
 from . import forms
+
+# For login
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 
 def home_view(request):
@@ -95,4 +100,24 @@ def register(request):
         })
 
 
+def login_view(request):
+    """To allow user to log in."""
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
+        user = authenticate(username=username, password=password)
+
+        if user:
+            print('user email and password match.')
+            if user.is_active:
+                print('user is active.')
+                login(request, user)
+                return HttpResponseRedirect(reverse('home'))
+            else:
+                return HttpResponse('Account not active.')
+        else:
+            print('Login failed.')
+            return HttpResponse('Invalid login.')
+    else:
+        return render(request, 'forms_app/login.html', {})
