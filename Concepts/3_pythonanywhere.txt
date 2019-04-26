@@ -11,16 +11,23 @@ To see what packages you have:
     - import django
     - django.__version__
 
-
 To install django:
 - pip install -U django==2.2
 
+To confirm that django is installed successfully:
+- which django-admin.py
 
+To clone repository from github:
+- git clone <clone link>
 
+To migrate and setup database:
+- cd into the folder where manage.py sits
+- python manage.py migrate
+- python manage.py makemigrations forms_app
+- python manage.py migrate
 
-
-
-
+To create superuser:
+- python manage.py createsuperuser
 
 
 
