@@ -117,7 +117,20 @@ def login_view(request):
             else:
                 return HttpResponse('Account not active.')
         else:
-            print('Login failed.')
+            print('Login failed. Username: {} and password: {}'.format(username, password))
             return HttpResponse('Invalid login.')
     else:
         return render(request, 'forms_app/login.html', {})
+
+
+def logout_view(request):
+    """To allow user to log out."""
+    logout(request)
+    return HttpResponse('You are logged out.')
+
+
+
+
+
+
+
