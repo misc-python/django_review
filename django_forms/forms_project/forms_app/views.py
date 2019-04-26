@@ -18,6 +18,7 @@ def home_view(request):
     return render(request, 'forms_app/index.html', context=context)
 
 
+@login_required
 def show_topic(request):
     """To show all data in Topic model."""
     topic = Topic.objects.all()
@@ -123,6 +124,7 @@ def login_view(request):
         return render(request, 'forms_app/login.html', {})
 
 
+@login_required
 def logout_view(request):
     """To allow user to log out."""
     logout(request)
