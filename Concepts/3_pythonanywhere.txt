@@ -76,7 +76,7 @@ To WSGI Configuration:
 - Save the file and click "Reload page"
 - Now you can see your page on joyliao07.pythonanywhere.com
 
-
+Don't forget to change Debug = False!
 
 
 
