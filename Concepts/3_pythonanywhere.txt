@@ -1,0 +1,35 @@
+In console, goes into Bash
+
+To create virtual environment:
+- mkvirtualenv --python=python3.6 myproj
+
+To see what packages you have:
+- pip list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

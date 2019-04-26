@@ -168,7 +168,10 @@ Django User Model:
     To do this, you need to add in a new model in your application that has a relationship to Django's original User class.
 
 
-
+Git & GitHub:
+    - Git is an open-source version-control system (https://git-scm.com)
+    - GitHub is a company that utilizes Git, adds additional tools on top, and host your codes on their website
+    - Version control: You can have a repository with various historical checkpoints that you can always refer back to.
 
 
 
