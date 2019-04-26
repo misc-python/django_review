@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from forms_app.models import Topic, Webpage, AccessRecord
-from forms_app.forms import FormName
 from . import forms
+
+# For login
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
 
 def home_view(request):
@@ -13,6 +18,7 @@ def home_view(request):
     return render(request, 'forms_app/index.html', context=context)
 
 
+@login_required
 def show_topic(request):
     """To show all data in Topic model."""
     topic = Topic.objects.all()
@@ -93,6 +99,40 @@ def register(request):
          'profile_form': profile_form,
          'registered': registered,
         })
+
+
+def login_view(request):
+    """To allow user to log in."""
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(username=username, password=password)
+
+        if user:
+            print('user email and password match.')
+            if user.is_active:
+                print('user is active.')
+                login(request, user)
+                return HttpResponseRedirect(reverse('home'))
+            else:
+                return HttpResponse('Account not active.')
+        else:
+            print('Login failed. Username: {} and password: {}'.format(username, password))
+            return HttpResponse('Invalid login.')
+    else:
+        return render(request, 'forms_app/login.html', {})
+
+
+@login_required
+def logout_view(request):
+    """To allow user to log out."""
+    logout(request)
+    return HttpResponse('You are logged out.')
+
+
+
+
 
 
 

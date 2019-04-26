@@ -42,3 +42,11 @@ class FormUserProfileInfo(forms.ModelForm):
     class Meta:
         model = UserProfileInfo
         fields = ('portfolio', 'picture')
+
+
+class FormLogIn(forms.ModelForm):
+    """Form for user in."""
+
+    class Meta:
+        model = User
+        fields = ('username', 'password')
