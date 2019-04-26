@@ -2,6 +2,7 @@
 {% load staticfiles %}
 
 {% block body_block %}
+  <div class="jumbotron">
     <h1>Input Test Forms Here (Not Linked To Database)</h1>
     <form method="POST">
       {{ form.as_p }}
@@ -9,5 +10,6 @@
       {% csrf_token %}
       <input type="submit" value="Submit">
     </form>
+  </div>
 
 {% endblock %}
