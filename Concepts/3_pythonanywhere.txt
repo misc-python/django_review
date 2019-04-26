@@ -6,7 +6,14 @@ To create virtual environment:
 To see what packages you have:
 - pip list
 
+    To find out what version of django you have. In your own terminal:
+    - python
+    - import django
+    - django.__version__
 
+
+To install django:
+- pip install -U django==2.2
 
 
 
