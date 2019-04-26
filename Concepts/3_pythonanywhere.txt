@@ -11,23 +11,70 @@ To see what packages you have:
     - import django
     - django.__version__
 
-
 To install django:
 - pip install -U django==2.2
 
+To confirm that django is installed successfully:
+- which django-admin.py
 
+To clone repository from github:
+- git clone <clone link>
 
+To migrate and setup database:
+- cd into the folder where manage.py sits
+- python manage.py migrate
+- python manage.py makemigrations forms_app
+- python manage.py migrate
 
+To create superuser:
+- python manage.py createsuperuser
+    joyliao07
+    joyliao07@gmail.com
+    djangoreview
 
+To create a new web app:
+- Go back to the dashboard and click into the Web tab
+- Click "Add a new web app"
+    - Link: joyliao07.pythonanywhere.com
+    - project name: djangoreview
+- Click into "Enter path to a virutalenv"
+- Enter </home/joyliao07/.virtualenvs/myproj>
 
+To obtain code source:
+- Access into Bash
+- Access the directory where the manage.py resides
+- <pwd> and copy the link
+- </home/joyliao07/django_review/django_forms/forms_project>
+- Save this path to "Source Code"
 
+To WSGI Configuration:
+- Click into WSGI Configuration file
+- Make "project_home" path the same as the source code path
 
+    import os
+    import sys
 
+    # add your project directory to the sys.path
+    project_home = u'/home/joyliao07/djangoreview/django_forms/forms_project'
+    if project_home not in sys.path:
+        sys.path.insert(0, project_home)
 
+    os.chdir(project_home)
 
+    # set environment variable to tell django where your settings.py is
+    # os.environ['DJANGO_SETTINGS_MODULE'] = 'djangoreview.settings'
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "forms_project.settings")
 
+    import django
+    django.setup()
 
-
+    # serve django via WSGI
+    from django.core.wsgi import get_wsgi_application
+    application = get_wsgi_application()
+- Save the file
+- Add ['joyliao07.pythonanywhere.com',] to Allowed_Host in setting.py
+- Save the file and click "Reload page"
+- Now you can see your page on joyliao07.pythonanywhere.com
 
 
 
