@@ -2,9 +2,11 @@
 {% load staticfiles %}
 
 {% block body_block %}
+  <div class="jumbotron">
     <h1>Forms App Home Page</h1>
 
     <p> Text: {{ text | cut:'django' }} </p>
     <p> Number: {{ number | add:100 }} </p>
+  </div>
 
 {% endblock %}

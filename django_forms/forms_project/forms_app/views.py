@@ -24,7 +24,7 @@ def show_topic(request):
     topic = Topic.objects.all()
     topic_dict = {'topic': topic}
 
-    return render(request, 'forms_app/show_forms.html', context=topic_dict)
+    return render(request, 'forms_app/show_topics.html', context=topic_dict)
 
 
 def testform_view(request):

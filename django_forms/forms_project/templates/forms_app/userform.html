@@ -2,6 +2,7 @@
 {% load staticfiles%}
 
 {% block body_block %}
+  <div class="jumbotron">
     <h1>UserProfile Form</h1>
     <form method="POST">
       {{ form.as_p }}
@@ -10,5 +11,6 @@
       <input type="submit" value="Submit">
     </form>
 
+  </div>
 
 {% endblock %}
