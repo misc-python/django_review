@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 class Topic(models.Model):
     top_name = models.CharField(max_length=264, unique=True)
+    description = models.CharField(max_length=264, default='default description')
 
     def __str__(self):
         return self.top_name
