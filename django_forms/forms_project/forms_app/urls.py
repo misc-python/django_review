@@ -4,5 +4,6 @@ from forms_app import views
 app_name = 'forms_app'
 
 urlpatterns = [
-    url('list', views.TopicListView.as_view(), name='list'),
+    url(r'list', views.TopicListView.as_view(), name='list'),
+    url(r'^(?P<pk>[-\w]+)/$', views.TopicDetailView.as_view(), name='detail'),
 ]

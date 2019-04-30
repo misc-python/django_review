@@ -36,9 +36,7 @@ class TopicListView(ListView):
 class TopicDetailView(DetailView):
     context_object_name = 'topic'
     model = Topic
-    template_name = 'forms_app/show_topics.html'
-
-
+    template_name = 'forms_app/topic_detail.html'
 
 
 def home_view(request):
