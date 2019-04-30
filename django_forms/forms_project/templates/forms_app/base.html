@@ -23,6 +23,7 @@
 
           {% if user.is_authenticated %}
             <li><a class="nav-link" href="{% url 'show topic' %}">Show "Topic"</a></li>
+            <li><a class="nav-link" href="{% url 'forms_app:list' %}">"Topic" List View</a></li>
             <li><a class="nav-link" href="{% url 'logout' %}">Log Out</a></li>
           {% else %}
             <li><a class="nav-link" href="{% url 'register' %}">Register</a></li>
