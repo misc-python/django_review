@@ -21,6 +21,7 @@ from forms_app import views
 urlpatterns = [
     path('', views.home_view, name="home"),
     path('cbv', views.CBView.as_view()),
+    path('cbvt', views.CBVTemplate.as_view()),
     path('showtopic', views.show_topic, name="show topic"),
     path('testforms', views.testform_view, name="test forms"),
     path('userprofile', views.userprofile_view, name="user profile"),

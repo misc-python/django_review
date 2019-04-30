@@ -10,6 +10,7 @@ from django.contrib.auth import authenticate, login, logout
 
 # CBV:
 from django.views.generic import View
+from django.views.generic.base import TemplateView
 
 
 class CBView(View):
@@ -17,7 +18,14 @@ class CBView(View):
         return HttpResponse('Class-based view')
 
 
+class CBVTemplate(TemplateView):
+    template_name = 'forms_app/index.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['text'] = 'hello cbvt context'
+        context['number'] = 123
+        return context
 
 
 def home_view(request):
