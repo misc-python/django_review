@@ -6,7 +6,7 @@
     <h1>Topic Data From Topic ListView:</h1>
     {% if topic %}
     {% for what in topic %}
-      <p>{{what.top_name}}</p>
+      <p><a href="{{ what.id }}"> {{what.top_name}} </a></p>
     
 
     {% endfor %}
