@@ -203,6 +203,22 @@ Class Based Template View:
     # location covington
 
 
+CRUD:
+    - Create, Retrieve, Update, Delete using CreateView, UpdateView, and DeleteView
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
