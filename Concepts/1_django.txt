@@ -174,7 +174,33 @@ Git & GitHub:
     - Version control: You can have a repository with various historical checkpoints that you can always refer back to.
 
 
+Function Based View:
+    def index(request):
+        return render(request, 'index.html')
 
+Class Based Template View:
+    class Index(TemplateView):
+        template_name = 'index.html'
+
+        def get_context_data(self, **kwargs):
+            context = super().get_context_data(**kwargs)
+            context['text'] = 'hello cbvt'
+            return context
+
+
+
+<*args>:
+    *args gives you all function parameters as a tuple. It's a way that you can prepare a function to accept as many arguments as it needs.
+<**kwargs>:
+    Key-word arguments let you prepare the function parameters as a dictionary.
+
+    def foo(**kwargs):
+        for a in kwargs:
+            print(a, kwargs[a])
+
+    foo(name='joyce', location=covington)
+    # name joyce
+    # location covington
 
 
 
