@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from forms_app.models import Topic, Webpage, AccessRecord
+from .models import Topic, Webpage, AccessRecord
 from . import forms
 
 # For login
@@ -9,13 +9,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 # CBV:
-from django.views.generic import View
-from django.views.generic.base import TemplateView
+from django.views.generic import View, TemplateView, ListView, DetailView
 
 
 class CBView(View):
     def get(self, request):
-        return HttpResponse('Class-based view')
+        return HttpResponse('Basic class-based view')
 
 
 class CBVTemplate(TemplateView):
@@ -23,9 +22,23 @@ class CBVTemplate(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['text'] = 'hello cbvt context'
+        context['text'] = 'hello TemplateView with context injection'
         context['number'] = 123
         return context
+
+
+class TopicListView(ListView):
+    model = Topic
+    # this will return an object "topic_list", but we will change the object name
+    context_object_name = 'topic'
+
+
+class TopicDetailView(DetailView):
+    context_object_name = 'topic'
+    model = Topic
+    template_name = 'forms_app/show_topics.html'
+
+
 
 
 def home_view(request):
