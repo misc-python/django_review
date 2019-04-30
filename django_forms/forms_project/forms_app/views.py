@@ -11,6 +11,9 @@ from django.contrib.auth import authenticate, login, logout
 # CBV:
 from django.views.generic import View, TemplateView, ListView, DetailView
 
+# CRUD:
+from django.view.generic import CreateView, UpdateView, DeleteView
+
 
 class CBView(View):
     def get(self, request):
@@ -37,6 +40,10 @@ class TopicDetailView(DetailView):
     context_object_name = 'topic'
     model = Topic
     template_name = 'forms_app/topic_detail.html'
+
+
+# class TopicCreateView(CreateView):
+
 
 
 def home_view(request):
