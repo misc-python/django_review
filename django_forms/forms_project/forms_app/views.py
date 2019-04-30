@@ -8,6 +8,17 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
+# CBV:
+from django.views.generic import View
+
+
+class CBView(View):
+    def get(self, request):
+        return HttpResponse('Class-based view')
+
+
+
+
 
 def home_view(request):
     """Home page."""
