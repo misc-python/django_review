@@ -12,7 +12,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View, TemplateView, ListView, DetailView
 
 # CRUD:
-from django.view.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView
 
 
 class CBView(View):
@@ -42,7 +42,14 @@ class TopicDetailView(DetailView):
     template_name = 'forms_app/topic_detail.html'
 
 
-# class TopicCreateView(CreateView):
+class TopicCreateView(CreateView):
+    fields = ('top_name', 'description')
+    model = Topic
+
+
+# class TopicUpdateView(UpdateView):
+#     fields = ('top_name', 'description')
+#     model = Topic
 
 
 
@@ -53,6 +60,7 @@ def home_view(request):
         "number": 150,
     }
     return render(request, 'forms_app/index.html', context=context)
+    # return HttpResponse('this is http response.')
 
 
 @login_required
