@@ -47,12 +47,6 @@ class TopicCreateView(CreateView):
     model = Topic
 
 
-
-
-
-
-
-
 def home_view(request):
     """Home page."""
     context = {
