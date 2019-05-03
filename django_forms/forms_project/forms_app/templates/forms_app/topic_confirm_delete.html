@@ -1,0 +1,16 @@
+{% extends "forms_app/base.html" %}
+{% load staticfiles %}
+
+{% block body_block%}
+  <div class="jumbotron">
+    <h1>Delete "{{ topic.top_name }}"?</h1>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn btn-danger" value="Delete">
+      <a href={% url 'forms_app:detail' pk=topic.pk %}>Cancel</a>
+
+    </form>
+  </div>
+{% endblock %}
