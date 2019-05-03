@@ -42,7 +42,14 @@ class TopicDetailView(DetailView):
     template_name = 'forms_app/topic_detail.html'
 
 
-# class TopicCreateView(CreateView):
+class TopicCreateView(CreateView):
+    fields = ('top_name', 'description')
+    model = Topic
+
+
+
+
+
 
 
 

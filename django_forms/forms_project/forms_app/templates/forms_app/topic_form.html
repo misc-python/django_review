@@ -1,0 +1,22 @@
+{% extends "forms_app/base.html" %}
+{% load staticfiles %}
+
+{% block body_block%}
+  <div class="jumbotron">
+    <h1>
+        {% if not form.instance.pk %}
+        Create New Topic
+        {% else %}
+        Update Topic
+        {% endif %}
+    </h1>
+
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" class="btn btn-primary" value="Submit">
+
+
+    </form>
+  </div>
+{% endblock %}
