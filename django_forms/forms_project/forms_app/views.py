@@ -13,6 +13,7 @@ from django.views.generic import View, TemplateView, ListView, DetailView
 
 # CRUD:
 from django.views.generic import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 
 class CBView(View):
@@ -51,6 +52,10 @@ class TopicUpdateView(UpdateView):
     fields = ('top_name', 'description')
     model = Topic
 
+
+class TopicDeleteView(DeleteView):
+    model = Topic
+    success_url = reverse_lazy("forms_app:list")
 
 
 def home_view(request):
