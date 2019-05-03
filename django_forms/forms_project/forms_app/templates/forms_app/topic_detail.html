@@ -6,7 +6,12 @@
     <h2>Topic Detail:</h2>
       <p> {{ topic.top_name }} </p>
       <p> {{ topic.description }} </p>
-    
+  </div>
+
+  <div class="container">
+    <p><a class="btn btn-warning" href="{% url 'forms_app:update' pk=topic.pk %}">Update</a></p>
+
 
   </div>
+
 {% endblock %}
