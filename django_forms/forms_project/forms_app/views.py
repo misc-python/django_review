@@ -47,6 +47,12 @@ class TopicCreateView(CreateView):
     model = Topic
 
 
+# class TopicUpdateView(UpdateView):
+#     fields = ('top_name', 'description')
+#     model = Topic
+
+
+
 def home_view(request):
     """Home page."""
     context = {
