@@ -1,0 +1,26 @@
+Edge Computing – Edge computing is a way to streamline the flow of traffic from IoT devices and provide real-time local data analysis
+
+Edge computing is a “mesh network of micro data centers that process or store critical data locally and push all received data to a central data center or cloud storage repository, in a footprint of less than 100 square feet,” according to research firm IDC. It is done to reduce the backhaul traffic to the central repository.
+
+
+
+Source: https://www.networkworld.com/article/3224893/what-is-edge-computing-and-how-it-s-changing-the-network.html
+
+=============================================================================
+=============================================================================
+
+Edge computing is an optimized and distributed approach (read: Fog Computing) to cloud computing systems. Offering several advantages by removing recurrent data processing from the cloud using resources at the network edge, much nearer to the source of data. Edge resources affords technical advantages over cloud-only processing and greatly improves scalability of systems while optimizing network efficiency reducing the amount of round-trips to the datacenter.
+
+5 Examples...
+
+
+
+
+
+
+
+
+
+
+
+Source: https://www.lanner-america.com/blog/5-examples-edge-computing-solutions-use-today/ 
