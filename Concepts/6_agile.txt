@@ -1,0 +1,34 @@
+
+Requirements
+    ||
+    \/ 
+Product Backlog
+    ||
+    \/ 
+Sprint Backlog
+    ||
+    \/ 
+Daily Scrum Meeting
+    ||
+    \/ 
+(Repeat for 2~4 weeks)
+    ||
+    \/ 
+Sprint Review
+    ||
+    \/ 
+Sprint Retrospective
+    ||
+    \/ 
+(The Next Sprint)
+
+Within each sprint, the development team builds and tests a functional part of the product until the product owner accepts it and the functionality becomes a potentially shippable product.
+
+Scrum teams deliver product features in increments at the end of each sprint. A product release occurs at the end of a sprint or after several sprints.
+
+Review the process! Review the process! Review the process! (Repeat..)
+
+
+
+
+Source: https://www.dummies.com/careers/project-management/the-function-of-the-scrum-and-sprint-within-an-agile-project/
