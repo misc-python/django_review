@@ -1,0 +1,36 @@
+SOAP (Simple Object Access Protocol):
+
+SOAP Envelope:
+    Header
+    Body
+      WSDL: XML (or other format)
+    HTTP (or other protocol)
+
+
+
+
+
+
+REST (Representational State Transfer):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https://www.service-architecture.com/articles/web-services/soap.html 
+
+
+
+
+
