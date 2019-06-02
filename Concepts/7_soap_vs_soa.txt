@@ -1,14 +1,17 @@
 SOAP (Simple Object Access Protocol):
 
-SOAP Envelope:
-    Header
-    Body
-      WSDL: XML (or other format)
-    HTTP (or other protocol)
 
-- XML based language for describing web services
-- WS Security: SOAP defines its own security known as WS Security
-- A JavaScript example (Source: https://stackoverflow.com/questions/124269/simplest-soap-example#11404133):
+    SOAP Envelope:
+        Header
+        Body
+          WSDL: XML (or other format)
+        HTTP (or other protocol)
+
+
+    - XML based language for describing web services
+    - WS Security: SOAP defines its own security known as WS Security
+    - A JavaScript example:
+
 
     <script type="text/javascript">
         function soap() {
@@ -53,7 +56,11 @@ REST (Representational State Transfer):
 
 
 
+SOAP VS REST Clients:
 
+A SOAP client works like a custom desktop application, tightly coupled to the server. There's a rigid contract between client and server, and everything is expected to break if either side changes anything.
+
+A REST client is more like a browser. It's a generic client... A client is supposed to enter a REST service with zero knowledge of the API, except for the entry point and the media type. In SOAP, the client needs previous knowledge on everything it will be using, or it won't even begin the interaction.
 
 
 
@@ -67,8 +74,8 @@ REST (Representational State Transfer):
 
 
 Source: https://www.service-architecture.com/articles/web-services/soap.html 
-
-
+Source: https://stackoverflow.com/questions/19884295/soap-vs-rest-differences
+Source: https://stackoverflow.com/questions/124269/simplest-soap-example#11404133
 
 
 
