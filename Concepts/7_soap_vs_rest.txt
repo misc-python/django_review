@@ -88,7 +88,15 @@ SOAP: SOAP permits XML data format only.
 REST: REST permits different data format such as Plain text, HTML, XML, JSON etc.
 
 
+REST (Representational State Transfer):
 
+A REST API defines a set of functions which developers can perform requests and receive responses via HTTP protocol such as GET, PUT, POST, and DELETE. 
+
+    - The client and server are independent of each other allowing either to be coded in any language
+    - Easy to test
+    1) Client–server: The client handles the front end the server handles the backend and can both be replaced independently of each other.
+    2) Stateless: No client data is stored on the server between requests and session state is stored on the client.
+    3) Cacheable: Clients can cache response (just like browsers caching static elements of a web page) to improve performance
 
 
 
@@ -97,5 +105,4 @@ Source: https://www.service-architecture.com/articles/web-services/soap.html
 Source: https://stackoverflow.com/questions/19884295/soap-vs-rest-differences
 Source: https://stackoverflow.com/questions/124269/simplest-soap-example#11404133
 Source: https://www.javatpoint.com/soap-vs-rest-web-services 
-
-
+Source: https://www.sitepoint.com/developers-rest-api/
