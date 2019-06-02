@@ -1,0 +1,31 @@
+Amazon Kinesis Data Streams:
+
+You can use Amazon Kinesis Data Streams to collect and process large streams of data records in real time. 
+
+You can create data-processing applications, known as Kinesis Data Streams applications on Amazon EC2 instances.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source: https://docs.aws.amazon.com/streams/latest/dev/introduction.html 
