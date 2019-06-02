@@ -1,0 +1,9 @@
+SOA (Service-Oriented Architecture):
+
+SOA is a structure that allows services to communicate with each other across different platforms and languages by implementing what is known as a “loose coupling” system, by switching to a standardized communication protocol.
+
+The term “loose coupling” refers to the client of a service, and its ability to remain independent of the service that it requires. By using an SOA, it is not necessary for the client to understand the language that is being used by the service, but instead, it relies on a structured interface that is able to process the transmission between the service and the client.
+
+
+
+Source: https://www.bmc.com/blogs/service-oriented-architecture-overview/ 
