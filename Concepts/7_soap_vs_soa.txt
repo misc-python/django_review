@@ -63,9 +63,29 @@ A SOAP client works like a custom desktop application, tightly coupled to the se
 A REST client is more like a browser. It's a generic client... A client is supposed to enter a REST service with zero knowledge of the API, except for the entry point and the media type. In SOAP, the client needs previous knowledge on everything it will be using, or it won't even begin the interaction.
 
 
+More Comparison:
 
 
+SOAP: SOAP is a protocol. 
+REST:  REST is an architectural style.
 
+SOAP: "Simple Object Access Protocol"  
+REST: "Representational State Transfer"
+
+SOAP: SOAP can't use REST because it is a protocol.  
+REST: REST can use SOAP web services because it is a concept and can use any protocol like HTTP,      SOAP.
+
+SOAP: SOAP defines standards to be strictly followed. 
+REST: REST does not define too much standards like SOAP.
+
+SOAP: SOAP requires more bandwidth and resource than REST.
+REST: REST requires less bandwidth and resource than SOAP.
+
+SOAP: SOAP defines its own security.
+REST: RESTful web services inherits security measures from the underlying transport.
+
+SOAP: SOAP permits XML data format only.
+REST: REST permits different data format such as Plain text, HTML, XML, JSON etc.
 
 
 
@@ -76,6 +96,6 @@ A REST client is more like a browser. It's a generic client... A client is suppo
 Source: https://www.service-architecture.com/articles/web-services/soap.html 
 Source: https://stackoverflow.com/questions/19884295/soap-vs-rest-differences
 Source: https://stackoverflow.com/questions/124269/simplest-soap-example#11404133
-
+Source: https://www.javatpoint.com/soap-vs-rest-web-services 
 
 
