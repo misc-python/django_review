@@ -5,11 +5,12 @@ You can use Amazon Kinesis Data Streams to collect and process large streams of 
 You can create data-processing applications, known as Kinesis Data Streams applications on Amazon EC2 instances.
 
 
+Kinesis Data Firehose:
 
 
+AWS Aurora:
 
-
-
+Amazon Aurora is a MySQL and PostgreSQL-compatible relational database built for the cloud, that combines the performance and availability of traditional enterprise databases with the simplicity and cost-effectiveness of open source databases.
 
 
 
