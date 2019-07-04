@@ -17,13 +17,16 @@ There are three major adventages of using AWS Lambda:
 
 ## Graphic Explanation
 
+When a client's request triggers an event, AWS Lambda access the lambda container and execute the user's code to perform a desired task.
 
-
-
-
-
+<img src="https://github.com/joyliao07/django_review/blob/concepts/Concepts/assets/aws_lambda.jpeg" alt="aws_lambda">
 
 **Container:** Container is a light-weighted, stand-alone, executable software package that includes all the system tools, system libraries for a desired developing environment. A container isolate the developing environment from its surrounding environment. 
+
+
+
+
+
 
 
 Source: https://en.wikipedia.org/wiki/AWS_Lambda
