@@ -42,7 +42,7 @@ To have AWS Lambda automatically perform the task for them, they can add the fol
             if (err) {
                 console.log(err, err.stack);
             } else {
-            console.log("s3 object copy successful.");
+                console.log("s3 object copy successful.");
             }
         });
     );
